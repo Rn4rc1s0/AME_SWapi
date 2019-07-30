@@ -71,7 +71,6 @@ exports.read_a_planetName = function (req, res) {
     });
 };
 
-
 exports.update_a_planet = function (req, res) {
     Planet.findOneAndUpdate({_id: req.params.planetId}, req.body, {new: true}, function (err, planet) {
         if (err)
@@ -79,7 +78,6 @@ exports.update_a_planet = function (req, res) {
         res.json(planet);
     });
 };
-
 
 exports.delete_a_planet = function (req, res) {
     Planet.deleteOne({
